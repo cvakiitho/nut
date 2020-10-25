@@ -13,4 +13,4 @@ RUN apt-get update && apt-get install -y \
 RUN pip3 install -r requirements.txt
 RUN mkdir /etc/udev/rules.d/ -p
 RUN echo 'SUBSYSTEM=="usb", ATTRS{idVendor}=="16c0", ATTRS{idProduct}=="27e2", GROUP="plugdev"' >> /etc/udev/rules.d/99-switch.rules
-CMD ["python3 nut.py"]
+CMD ["python3 nut.py --usb"]
